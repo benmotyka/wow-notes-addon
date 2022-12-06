@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: Quick Notes
+## Notes: Create quick notes.
+## Version: 0.1
+## Author: benmotyka
+## URL: http://github.com/benmotyka
+## DefaultState: enabled
+
+QuickNotes.lua
