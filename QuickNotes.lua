@@ -1,4 +1,15 @@
-print(UnitName("player") .. " notes loaded")
+function Help(Command)
+	if ( strlower(Command) == "" ) or ( strlower(Command) == "options" ) or ( strlower(Command) == "option" ) or ( strlower(Command) == "help" ) then for i,v in ipairs(Commands) do print(v); end; return end
+
+
+	print("Quicknotes: Unknown Command. Type '/qn' for a list of options")
+end
+
+Commands = {
+	[1] = "---Quick notes Options List---",
+	[2] = "/qn open -> Toggles display quick notes display.",
+	[3] = "/qn add <text> -> Adds <text> to quick notes.",
+}
 
 UIConfig = CreateFrame("Frame", "GlobalFrame", UIParent, "BasicFrameTemplateWithInset");
 
@@ -27,4 +38,6 @@ UIConfig.inviteBtn:SetText("Invite Members");
 UIConfig.inviteBtn:SetNormalFontObject("GameFontNormal");
 UIConfig.inviteBtn:SetHighlightFontObject("GameFontHighlight");
 
-NotesUI = CreateFrame("Frame", "NotesFrame", UIParent, "BasicFrameTemplateWithInset")
+SlashCmdList["MY2SCRIPT"] = HELP
+SLASH_MY2SCRIPT1 = "/quicknotes"
+SLASH_MY2SCRIPT2 = "/qn"
